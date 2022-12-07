@@ -1,0 +1,8 @@
+mixin input(data)
+  each value in data
+    -let inputClass = `input__box_${value["icon"]}`
+    .input 
+      .input__header
+        p.input__title= value["title"]
+        p.input__subtitle Can't be zero
+      input.input__box(class= inputClass type="number" min="0" placeholder= value["placeholder"])

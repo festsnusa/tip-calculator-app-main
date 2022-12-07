@@ -1,0 +1,7 @@
+mixin tip(arr)
+  .tip
+    p.tip__title Select Tip %
+    .tip__buttons
+      each value in arr
+        .tip__button= `${value}%`
+      input.tip__button.tip__button_colorless(placeholder= "Custom" type="number" min="0") 

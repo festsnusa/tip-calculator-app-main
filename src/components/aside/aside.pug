@@ -1,0 +1,11 @@
+mixin aside(data)
+  .aside 
+    .aside__items
+      each value in data
+        -let priceClass = `aside__price_${value["price"]}`
+        .aside__item 
+          .aside__text
+            p.aside__title= value["title"]
+            p.aside__subtitle / person 
+          p.aside__price(class= priceClass) $0.00
+    .aside__button reset

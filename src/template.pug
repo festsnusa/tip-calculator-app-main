@@ -1,0 +1,34 @@
+include components/input/input
+include components/tip/tip
+include components/aside/aside
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Tip Calculator
+  body 
+    .component 
+      header.component__header 
+        .header 
+          a(href="#") 
+            img.header__logo(src=require('./images/logo.svg'), alt="logo")
+      main.component__main
+        .main
+          .main__left
+            .main__input
+              +input([
+                {"title": "Bill", "icon": "dollar", "placeholder": "0.00"}
+              ])
+            .main__tip 
+              +tip([5, 10, 15, 25, 50])
+            +input([
+              {"title": "Number of people", "icon": "person", "placeholder": "0"}
+            ])
+          aside.main__aside
+            +aside([
+              {"title": "Tip Amount", "price": "tip"},
+              {"title": "Total", "price": "total"}
+            ])

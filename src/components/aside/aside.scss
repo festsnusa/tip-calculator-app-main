@@ -1,0 +1,49 @@
+@import '../../vars.scss';
+
+.aside {
+  background-color: $cyanDark;
+  padding: 2rem 1.5rem;
+  border-radius: 0.625rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__items {
+    flex-grow: 1;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__subtitle {
+    color: $cyanDarkGray;
+  }
+
+  &__price {
+    font-size: 2rem;
+    color: $cyan;
+  }
+
+  &__button {
+    background-color: $cyan;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    margin-bottom: auto;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+  }
+}

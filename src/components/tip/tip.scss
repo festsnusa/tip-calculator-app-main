@@ -1,0 +1,46 @@
+@import '../../vars.scss';
+
+.tip {
+
+  &__title {
+    color: $cyanDarkGray;
+    padding-bottom: 1rem;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__button {
+
+    border-radius: 0.313rem;
+    text-align: center;
+    font-size: $fontSize;
+    color: $cyanGrayLighter;
+    cursor: pointer;
+    padding: 0.6rem;
+    background-color: $cyanDark;
+
+    &:hover {
+      background-color: $cyanDarkGray;
+      color: $white;
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+
+    &_colorless {
+      background-color: $cyanGrayLighter;
+      color: $cyanDarkGray;
+      max-width: 11rem;
+    }
+
+    &_active {
+      background-color: $cyan;
+      color: $cyanDark;
+    }
+    
+  }
+}
